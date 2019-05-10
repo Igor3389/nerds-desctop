@@ -1,0 +1,24 @@
+.option {
+  width: 100%;
+  padding: 26px 60px 44px;
+  background-color: $header-color;
+
+  &__title {
+    margin-bottom: 15px;
+    text-align: center;
+    @include title(18px, 30px);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 28px;
+    line-height: 18px;
+    color: #666666;
+    text-align: center;
+  }
+
+  &__button {
+    margin-left: 20px;
+    width: 200px;
+  }
+}

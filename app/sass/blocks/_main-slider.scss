@@ -1,0 +1,71 @@
+.main-slider {
+  margin-bottom: 80px;
+  &__item {
+    padding-top: 68px;
+    padding-bottom: 80px;
+    background-repeat: no-repeat;
+    &--1 {
+      background-image: url('../img/background/slide-1.png');
+      background-position: right 35px bottom;
+    }
+
+    &--2 {
+      background-image: url('../img/background/slide-2.png');
+      background-position: right 20px bottom;
+    }
+
+    &--3 {
+      background-image: url('../img/background/slide-3.png');
+      background-position: right 20px bottom;
+    }
+  }
+
+  &__title {
+    @include title(55px, 55px);
+    width: 525px;
+    margin-bottom: 25px;
+    text-transform: none;
+  }
+
+  &__text {
+    margin-bottom: 39px;
+    width: 375px;
+    text-transform: none;
+  }
+
+  &__button {
+    width: 241px;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  bottom: 97px;
+  left: 50%;
+  margin-left: -46px;
+
+  & li {
+    position: relative;
+    margin-right: 17px;
+    width: 18px;
+    height: 18px;
+    background-color: $white;
+    border-radius: 50%;
+
+    &.slick-active::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 8px;
+      height: 8px;
+      border: 2px solid #c1c1c1;
+      border-radius: 50%;
+    }
+
+    & button {
+      display: none;
+    }
+  }
+}

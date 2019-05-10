@@ -1,0 +1,58 @@
+@import "normalize";
+@import "variables";
+@import "libs/slick";
+@import "mixins";
+@import "fonts";
+@import "hidden";
+@import "settings";
+@import "blocks/chekcbox";
+@import "blocks/radio";
+@import "blocks/button";
+@import "blocks/container";
+@import "blocks/main-header";
+@import "blocks/main-navigation";
+@import "blocks/logo";
+@import "blocks/nav-list";
+@import "blocks/cart";
+@import "blocks/main-slider";
+@import "blocks/services";
+@import "blocks/main";
+@import "blocks/features";
+@import "blocks/statistic";
+@import "blocks/works";
+@import "blocks/footer";
+@import "blocks/address";
+@import "blocks/social";
+@import "blocks/discount";
+@import "blocks/catalog";
+@import "blocks/form";
+@import "blocks/range";
+@import "blocks/adaptive";
+@import "blocks/elements";
+@import "blocks/products";
+@import "blocks/product";
+@import "blocks/sort";
+@import "blocks/option";
+@import "blocks/pages";
+@import "blocks/map";
+@import "blocks/modal";
+
+
+body {
+  @include default;
+  min-width: 320px;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: left;
+
+  background-color: $white;
+  color: $text-color;
+}
+
+
+
+
+

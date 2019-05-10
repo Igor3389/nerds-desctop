@@ -1,0 +1,46 @@
+.works {
+  padding-top: 51px;
+  padding-bottom: 32px;
+  margin-bottom: 80px;
+  border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 26px;
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 91px;
+    &::after {
+      content: '';
+      position: absolute;
+      right: -47px;
+      top: 12px;
+      width: 2px;
+      height: 52px;
+      background-color: #eeeeee;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    opacity: 0.2;
+
+    &:hover, &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+}

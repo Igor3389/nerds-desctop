@@ -1,0 +1,22 @@
+footer.footer
+    .map
+        iframe.map__frame(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59894241237!2d30.32089461569251!3d59.93879686904838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1553304439037', width="100%", height="416", frameborder="0", style="border:0", allowfullscreen)
+    section.address
+        h2.address__title NЁRDS DESIGN STUDIO
+        p.address__text
+            | 191186, Санкт-Петербург,
+            br
+            | ул. Б. Конюшенная, д. 19/8
+        p.address__text тел. +7 (812) 275-75-75
+        button.address__button.button Напишите нам
+    .container
+        .footer__bottom
+            .social
+                +socialList('social', 'item', 'link', [
+                    {link: '#', title: 'Контакт', id: 'vk', width: 26, height: 15},
+                    {link: '#', title: 'Фейсбук', id: 'fb', width: 12, height: 22},
+                    {link: '#', title: 'Инстаграмм', id: 'insta', width: 21, height: 21}])
+            .discount
+                b.discount__slogan Давайте дружить, это выгодно!
+                p.discount__text Скидка 10% для друзей из социальных сетей.
+

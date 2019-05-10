@@ -1,0 +1,13 @@
+.discount {
+  padding-top: 7px;
+  &__slogan {
+    display: block;
+    @include title(36px, 36px);
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    line-height: 22px;
+    color: #444444;
+  }
+}

@@ -1,0 +1,24 @@
+.address {
+  position: relative;
+  top: -371px;
+  left: 93px;
+  padding: 49px 50px 45px;
+  background-color: $white;
+  width: 318px;
+
+  &__title {
+    margin-bottom: 23px;
+    @include title(18px, 30px)
+  }
+
+  &__text {
+    margin-bottom: 18px;
+    line-height: 18px;
+    color: #666666;
+  }
+
+  &__button {
+    margin-top: 19px;
+    width: 220px;
+  }
+}

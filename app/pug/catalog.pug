@@ -1,0 +1,195 @@
+extends layouts/page
+include mixins/mixins
+block variables
+    - var title= 'Магазин'
+    - var mainPage= false
+    - var catalogPage= true
+    - var activNavItem= 'МАГАЗИН'
+block pageContent
+    main.main.catalog(class=mainPage ? 'main-page' : 'inner-page', role='main')
+        .catalog__wrapper.container
+            form.catalog__form.form(action='#', method='post')
+                fieldset.form__section.range
+                    legend.form__title.range__title Стоимость:
+                    .range__box
+                        .range__line
+                            .range__scale
+                            span.range__indicator.range__indicator--left
+                            span.range__indicator.range__indicator--right
+                    .range__bottom
+                        label.range__label
+                            span.range__text От
+                            input.range__field(type='text', name='minRange', value='0')
+                        label.range__label
+                            span.range__text До
+                            input.range__field(type='text', name='maxRange', value='15 000')
+                fieldset.form__section.adaptive
+                    legend.form__title.adaptive__title Сетка:
+                    ul.adaptive__list
+                        li.adaptive__item
+                            label.radio
+                                input.radio__field(type='radio', name='adaptive', checked)
+                                span.radio__indicator
+                                span.radio__text Адаптивная
+                        li.adaptive__item
+                            label.radio
+                                input.radio__field(type='radio', name='adaptive')
+                                span.radio__indicator
+                                span.radio__text Фиксированная
+                        li.adaptive__item
+                            label.radio
+                                input.radio__field(type='radio', name='adaptive')
+                                span.radio__indicator
+                                span.radio__text Резиновая
+                fieldset.form__section.elements
+                    legend.form__title.elements__title Особенности:
+                    ul.elements__list
+                        li.elements__item
+                            label.checkbox
+                                input.checkbox__field(type='checkbox', name='slider', checked)
+                                span.checkbox__indicator
+                                span.checkbox__text Слайдер
+                        li.elements__item
+                            label.checkbox
+                                input.checkbox__field(type='checkbox', name='feature')
+                                span.checkbox__indicator
+                                span.checkbox__text Блок преимущества
+                        li.elements__item
+                            label.checkbox
+                                input.checkbox__field(type='checkbox', name='news', checked)
+                                span.checkbox__indicator
+                                span.checkbox__text Новости
+                        li.elements__item
+                            label.checkbox
+                                input.checkbox__field(type='checkbox', name='gallery')
+                                span.checkbox__indicator
+                                span.checkbox__text Галерея
+                        li.elements__item
+                            label.checkbox
+                                input.checkbox__field(type='checkbox', name='cart')
+                                span.checkbox__indicator
+                                span.checkbox__text Корзина
+                button.form__button.button.button--gray Показать
+            .catalog__products.products
+                .products__sort.sort
+                    h2.sort__title Сортировать:
+                    .sort__list
+                        a.sort__item.sort__item--active По цене
+                        a.sort__item(href='#') По типу
+                        a.sort__item(href='#') По названию
+                    .sort__rank
+                        a.sort__rank-item--down.sort__rank-item--active(aria-label='По убыванию')
+                        a.sort__rank-item--up(href='#', aria-label='По возрастанию')
+                ul.products__list
+                    li.products__item.product
+                        .product__decor
+                            span.product__decor-round
+                            span.product__decor-round
+                            span.product__decor-round
+                        +img({
+                            class: 'product__image',
+                            src: 'img/site-photo-1.jpg',
+                            path: 'img/',
+                            name: 'site-photo-1',
+                            alt: 'Седона',
+                            retina: ['2x', '3x']
+                        })
+                        .product__option.product__option--nojs.option
+                            h3.option__title SEDONA
+                            p.option__text Информационный сайт  для туристов
+                            a.option__button.button.button--product 9 900 руб.
+                    li.products__item.product
+                        .product__decor
+                            span.product__decor-round
+                            span.product__decor-round
+                            span.product__decor-round
+                        +img({
+                            class: 'product__image',
+                            src: 'img/site-photo-2.jpg',
+                            path: 'img/',
+                            name: 'site-photo-2',
+                            alt: 'Пинк',
+                            retina: ['2x', '3x']
+                        })
+                        .product__option.product__option--nojs.option
+                            h3.option__title Pink App
+                            p.option__text Продуктовый лендинг приложения для iOS и Android
+                            a.option__button.button.button--product 9 900 руб.
+                    li.products__item.product
+                        .product__decor
+                            span.product__decor-round
+                            span.product__decor-round
+                            span.product__decor-round
+                        +img({
+                            class: 'product__image',
+                            src: 'img/site-photo-3.jpg',
+                            path: 'img/',
+                            name: 'site-photo-3',
+                            alt: 'Барбершоп',
+                            retina: ['2x', '3x']
+                        })
+                        .product__option.product__option--nojs.option
+                            h3.option__title Barbershop
+                            p.option__text Сайт салоны красоты. Для мужчин, да.
+                            a.option__button.button.button--product 9 900 руб.
+                    li.products__item.product
+                        .product__decor
+                            span.product__decor-round
+                            span.product__decor-round
+                            span.product__decor-round
+                        +img({
+                            class: 'product__image',
+                            src: 'img/site-photo-4.jpg',
+                            path: 'img/',
+                            name: 'site-photo-4',
+                            alt: 'Мишка',
+                            retina: ['2x', '3x']
+                        })
+                        .product__option.product__option--nojs.option
+                            h3.option__title MISHKA
+                            p.option__text Интернет-магазин  вязаных игрушек
+                            a.option__button.button.button--product 9 900 руб.
+                    li.products__item.product
+                        .product__decor
+                            span.product__decor-round
+                            span.product__decor-round
+                            span.product__decor-round
+                        +img({
+                            class: 'product__image',
+                            src: 'img/site-photo-5.jpg',
+                            path: 'img/',
+                            name: 'site-photo-5',
+                            alt: 'А-плюс',
+                            retina: ['2x', '3x']
+                        })
+                        .product__option.product__option--nojs.option
+                            h3.option__title A Plus
+                            p.option__text Лендинг курсов повышения квалификации
+                            a.option__button.button.button--product 9 900 руб.
+                    li.products__item.product
+                        .product__decor
+                            span.product__decor-round
+                            span.product__decor-round
+                            span.product__decor-round
+                        +img({
+                            class: 'product__image',
+                            src: 'img/site-photo-6.jpg',
+                            path: 'img/',
+                            name: 'site-photo-6',
+                            alt: 'Кваст',
+                            retina: ['2x', '3x']
+                        })
+                        .product__option.product__option--nojs.option
+                            h3.option__title КВАСТ
+                            p.option__text Промо-сайт производителя крафтового кваса
+                            a.option__button.button.button--product 9 900 руб.
+                .products__pages.pages
+                    ul.pages__list
+                        li.pages__item
+                            a.pages__button.pages__button--active.button.button--gray 1
+                        li.pages__item
+                            a.pages__button.button.button--gray(href='#') 2
+                        li.pages__item
+                            a.pages__button.button.button--gray(href='#') 3
+                        li.pages__item
+                            a.pages__button.pages__button--next.button.button--gray(href='#') Следующая

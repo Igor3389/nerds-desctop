@@ -1,0 +1,36 @@
+.nav-list {
+  display: flex;
+  margin-right: auto;
+  padding-top: 6px;
+
+  &__item {
+    margin-right: 45px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $acient;
+      }
+    }
+  }
+
+  &__link {
+    &[href]:hover, &[href]:focus {
+      color: $acient;
+    }
+
+    &[href]:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}

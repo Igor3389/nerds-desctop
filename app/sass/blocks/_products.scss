@@ -1,0 +1,21 @@
+.products {
+  &__sort {
+    margin-bottom: 52px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-bottom: 25px;
+    margin-right: 40px;
+    width: 360px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}

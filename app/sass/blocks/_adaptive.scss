@@ -1,0 +1,15 @@
+.adaptive {
+  margin-bottom: 25px;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    line-height: 20px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+}

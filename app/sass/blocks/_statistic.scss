@@ -1,0 +1,46 @@
+.statistic {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+
+  &__img {
+    position: relative;
+    left: 15px;
+    margin-bottom: 29px;
+  }
+
+  &__slogan {
+    margin-bottom: 51px;
+    font-weight: 700;
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__table {
+    border-collapse: collapse;
+  }
+
+  &__col {
+    padding-left: 15px;
+    width: 107px;
+    text-align: left;
+  }
+
+  &__value {
+    font-size: 45px;
+    font-weight: 700;
+    color: black;
+
+    & span {
+      font-size: 24px;
+      position: relative;
+      top: -17px;
+    }
+  }
+
+  &__parametr {
+    padding-top: 17px;
+    line-height: 20px;
+  }
+}

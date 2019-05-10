@@ -1,0 +1,51 @@
+header.main-header
+    .container
+        nav.main-navigation
+            if mainPage
+                a.logo(aria-label='Логотип NERDS')
+                    +icon('logo__icon', 'logo', 160, 65, {role: 'img'})
+                +navList('nav-list', 'item', 'link', '', [
+                    {title: 'СТУДИЯ'},
+                    {title: 'КЛИЕНТЫ'},
+                    {title: 'МАГАЗИН', link: 'catalog'},
+                    {title: 'КОНТАКТЫ'}])
+            else
+                a.logo(href='index.html', aria-label='Логотип NERDS')
+                    +icon('logo__icon', 'logo', 160, 65, {role: 'img'})
+                +navList('nav-list', 'item', 'link', 'МАГАЗИН', [
+                    {title: 'СТУДИЯ'},
+                    {title: 'КЛИЕНТЫ'},
+                    {title: 'МАГАЗИН'},
+                    {title: 'КОНТАКТЫ'}])
+            if cartPage
+                a.cart.cart--active
+                    +icon('cart__icon', 'cart', 15, 15, {role: 'img'})
+                    | КОРЗИНА
+            else
+                a.cart(href='#')
+                    +icon('cart__icon', 'cart', 15, 15, {role: 'img'})
+                    | КОРЗИНА
+        if mainPage
+            .main-slider
+                .main-slider__wrapper
+                    .main-slider__item.main-slider__item--1
+                        h2.main-slider__title Долго, дорого,  скрупулезно.
+                        p.main-slider__text Математически выверенный дизайн для вашего сайта или мобильного приложения.
+                        a.main-slider__button.button УЗНАТЬ БОЛЬШЕ
+                .main-slider__wrapper
+                    .main-slider__item.main-slider__item--2
+                        h2.main-slider__title Любим математику как никто другой
+                        p.main-slider__text Никакого креатива, только математические формулы для расчета идеальных пропорций.
+                        a.main-slider__button.button УЗНАТЬ БОЛЬШЕ
+                .main-slider__wrapper
+                    .main-slider__item.main-slider__item--3
+                        h2.main-slider__title Только ночь, только хардкор
+                        p.main-slider__text Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
+                        a.main-slider__button.button УЗНАТЬ БОЛЬШЕ
+        else
+            if catalogPage
+                h1.catalog__title Магазин готовых шаблонов
+
+
+
+

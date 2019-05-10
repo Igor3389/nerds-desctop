@@ -1,0 +1,38 @@
+.cart {
+  position: relative;
+
+  width: 120px;
+  padding-left: 40px;
+  padding-right: 4px;
+  padding-top: 6px;
+  text-align: right;
+
+  &[href]:hover, &[href]:focus {
+    color: $acient;
+  }
+
+  &[href]:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &--active {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $acient;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    fill: #a6a6a6;
+  }
+}

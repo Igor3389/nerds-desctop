@@ -1,0 +1,18 @@
+@mixin default {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-default {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin title($fsz, $lh) {
+  color: $black;
+  font-size: $fsz;
+  line-height: $lh;
+}
+

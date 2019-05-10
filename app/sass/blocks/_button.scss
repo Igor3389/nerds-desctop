@@ -1,0 +1,82 @@
+.button {
+  display: inline-block;
+  padding: 17px 5px;
+
+  font: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  color: $white;
+  background-color: $button-background;
+  border-radius: 3px;
+
+  &:hover, &:focus {
+    cursor: pointer;
+    background-color: $button-hover-background;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $button-active-background;
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 3px 0 0 #c13135;
+  }
+
+  &--product {
+    background-color: #fb565a;
+
+    &:hover, &:focus {
+      background-color: #e74246;
+    }
+
+    &:active {
+      background-color: #d7373b;
+      color: $white;
+      box-shadow: inset 0 3px 0 0 #c13135;
+    }
+  }
+
+  &--green {
+    background-color: $button-green-background;
+
+    &:hover, &:focus {
+      background-color: $button-green-hover-background;
+    }
+
+    &:active {
+      background-color: $button-green-active-background;
+      box-shadow: inset 0 3px 0 0 #009958;
+    }
+  }
+
+  &--yellow {
+    background-color: $button-yellow-background;
+
+    &:hover, &:focus {
+      background-color: $button-yellow-hover-background;
+    }
+
+    &:active {
+      background-color: $button-yellow-active-background;
+      box-shadow: inset 0 3px 0 0 #ce961f;
+    }
+  }
+
+  &--gray {
+    color: $black;
+    font-weight: 500;
+    background-color: $button-gray-background;
+
+    &:hover, &:focus {
+      background-color: $button-gray-hover-background;
+    }
+
+    &:active {
+      background-color: $button-gray-active-background;
+      color: rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 3px 0 0  $button-gray-active-shadow;
+    }
+  }
+}

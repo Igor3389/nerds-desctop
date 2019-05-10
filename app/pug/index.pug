@@ -1,0 +1,102 @@
+extends layouts/page
+include mixins/mixins
+block variables
+    - var title= 'Nerds | Главная'
+    - var mainPage= true
+    - var cartPage= false
+    - var activNavItem= ''
+block pageContent
+    main.main(class=mainPage ? 'main-page' : 'inner-page', role='main')
+        h1.visually-hidden Nerds
+        section.services
+            h2.visually-hidden Услуги Nerds
+            ul.services__list.container
+                li.services__item
+                    +img({class: 'services__img', src: 'img/illustration-1.jpg', name: 'illustration-1', path: 'img/', alt: 'sites', retina: ['2x', '3x']})
+                    h3.services__title Веб-сайты
+                    p.services__text Мир никогда не будет прежним после того как увидит ваш сайт!
+                    a.services__button.button ЗАКАЗАТЬ
+                li.services__item
+                    +img({class: 'services__img', src: 'img/illustration-2.jpg', name: 'illustration-2', path: 'img/', alt: 'applications', retina: ['2x', '3x']})
+                    h3.services__title Приложения
+                    p.services__text Покорите топ-10 приложений в AppStore и Google Play
+                    a.services__button.button.button--green ЗАКАЗАТЬ
+                li.services__item
+                    +img({class: 'services__img', src: 'img/illustration-3.jpg', name: 'illustration-3', path: 'img/', alt: 'presentations', retina: ['2x', '3x']})
+                    h3.services__title Презентации
+                    p.services__text Вы даже не подозреваете, насколько вы изумительны!
+                    a.services__button.button.button--yellow ЗАКАЗАТЬ
+        .main__block.container
+            section.features
+                h2.features__title Мы — маленькая, но гордая дизайн-студия из Краснодара.
+                p.features__text Исповедуем принципы минимализма и чистоты. Ставим математический расчетпревыше креатива. Работаем не покладая рук, как роботы.
+                h3.features__makes Выполняем заказы на разработку:
+                ul.features__makes-list
+                    li.features__makes-item Веб-сайтов любой сложности
+                    li.features__makes-item Мобильных приложений для iOS и Android
+                    li.features__makes-item Слайдшоу и видео для корпоративных презентаций
+            section.statistic
+                +img({class: 'statistic__img', src: 'img/nerds-illustration.jpg', name: 'nerds-illustration', path: 'img/', atl: 'логотип Nerds', retina: ['2x', '3x']})
+                b.statistic__slogan с 2004 года Любим точность во всем:
+                table.statistic__table
+                    tr
+                        td.statistic__col.statistic__value
+                            | 146
+                            span %
+                        td.statistic__col.statistic__value
+                            | 100
+                            span %
+                        td.statistic__col.statistic__value
+                            | 50
+                            span %
+                    tr
+                        td.statistic__col.statistic__parametr Уровень самоотдачи
+                        td.statistic__col.statistic__parametr Соблюдение  сроков
+                        td.statistic__col.statistic__parametr Минимальная предоплата
+        section.works.container
+            h2.visually-hidden Наши работы
+            ul.works__list
+                li.works__item
+                    a.works__link(href='#')
+                        +img({
+                            class: 'works__img',
+                            format: '.png',
+                            src: 'img/outher-logo-1.png',
+                            name: 'outher-logo-1',
+                            path: 'img/',
+                            alt: 'Наша работа',
+                            retina: ['2x', '3x']
+                        })
+                li.works__item
+                    a.works__link(href='#')
+                        +img({
+                            class: 'works__img',
+                            format: '.png',
+                            src: 'img/outher-logo-2.png',
+                            name: 'outher-logo-2',
+                            path: 'img/',
+                            alt: 'Наша работа',
+                            retina: ['2x', '3x']
+                        })
+                li.works__item
+                    a.works__link(href='#')
+                        +img({
+                            class: 'works__img',
+                            format: '.png',
+                            src: 'img/outher-logo-3.png',
+                            name: 'outher-logo-3',
+                            path: 'img/',
+                            alt: 'Наша работа',
+                            retina: ['2x', '3x']
+                        })
+                li.works__item
+                    a.works__link(href='#')
+                        +img({
+                            class: 'works__img',
+                            format: '.png',
+                            src: 'img/outher-logo-4.png',
+                            name: 'outher-logo-4',
+                            path: 'img/',
+                            alt: 'Наша работа',
+                            retina: ['2x', '3x']
+                        })

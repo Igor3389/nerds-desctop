@@ -1,0 +1,15 @@
+.footer {
+  //padding-top: 54px;
+  padding-bottom: 54px;
+
+  background-image: url('../img/background/footer.jpg');
+  background-repeat: no-repeat;
+  background-position: top left -47px;
+
+  &__bottom {
+    display: flex;
+    margin-top: -316px;
+    padding-top: 69px;
+    padding-bottom: 10px;
+  }
+}

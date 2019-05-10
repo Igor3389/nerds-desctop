@@ -1,0 +1,16 @@
+.form {
+  &__section {
+    border: none;
+  }
+
+  &__title {
+    @include title(18px, 30px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

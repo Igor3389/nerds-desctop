@@ -1,0 +1,139 @@
+.modal {
+  &__overlay {
+    display: none;
+
+    &.modal-overlay-visually {
+      display: block;
+    }
+  }
+
+  &__write {
+    display: none;
+  }
+
+  &__popup {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    margin-left: -480px;
+  }
+
+  &__popup-close {
+      z-index: 1;
+      position: absolute;
+      top: 80px;
+      right: 89px;
+
+      width: 21px;
+      height: 21px;
+
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        cursor: pointer;
+
+        &::before, &::after {
+          background-color: #fb565a;
+        }
+      }
+
+      &:active {
+        &::before, &::after {
+          background-color: #ffeeee;
+        }
+      }
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: -3px;
+
+        width: 26px;
+        height: 4px;
+
+        background-color: #fecccd;
+
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+  }
+}
+
+.write {
+  padding: 67px 100px 82px;
+  width: 960px;
+  background-color: $white;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+
+  &__title {
+    @include title(45px, 45px);
+    margin-bottom: 38px;
+  }
+
+  &__form-top {
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  &__label-top {
+    width: 360px;
+    font-weight: 700;
+    &:first-child {
+      margin-right: auto;
+    }
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+
+  &__label-text {
+    display: block;
+    margin-bottom: 7px;
+  }
+
+  &__field {
+    padding: 13px 14px;
+    width: 100%;
+    border: 2px solid #d7dcde;
+    border-radius: 3px;
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 18px;
+      color: #444444
+    }
+
+    &:hover {
+      border-color: #b4b9bb;
+    }
+
+    &:focus {
+      border-color: #000000;
+    }
+
+    &.error {
+      border-color: #e74246;
+
+      &::placeholder {
+        color: #e74246;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 39px;
+    padding-top: 12px;
+    height: 118px;
+  }
+
+  &__button {
+    width: 260px;
+  }
+
+}

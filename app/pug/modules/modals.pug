@@ -1,0 +1,18 @@
+.modal__write
+    section.write
+        h2.write__title Напишите нам
+        form.write__form(action='#', method='post')
+            p.write__form-top
+                label.write__label-top
+                    span.write__label-text Ваше имя:
+                    input.write__field(type='text', name='name', placeholder='Имя Фамилия')
+                label.write__label-top
+                    span.write__label-text Ваш e-mail:
+                    input.write__field(type='text', name='mail', placeholder='email@example.com')
+            label.write__label
+                span.write__label-text Текст письма:
+                textarea.write__field.write__text(name='content', placeholder='В свободной форме')
+            button.button.write__button(type='submit') Отправить
+.modal__overlay
+    .modal__popup
+        button.modal__popup-close(aria-label='Закрыть модальное окно')
